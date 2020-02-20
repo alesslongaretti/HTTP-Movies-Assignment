@@ -35,7 +35,7 @@ const initialItem = {
         axios
         .put(`http://localhost:5000/api/movies/${props.match.params.id}`, movie)
         .then(res => {
-            
+            console.log(res)
             props.history.push('/')
         })
         .catch(err => console.log(err))
@@ -66,6 +66,7 @@ const initialItem = {
                 placeholder="metascore"
                 value={movie.metascore}
                 />
+                
                 <button>Update</button>
             </form>
         </div>
