@@ -21,7 +21,7 @@ const initialItem = {
             setMovie(res.data)
         })
         .catch(err => console.log(err))
-    }, [])
+    }, [props.match.params.id])
 
     const changeHandler = e => {
         setMovie({
